@@ -11,10 +11,10 @@
 		보내는 input태그의 name속성은 컬럼명과 일치시켜주세요.--> 
 	<h2>회원가입</h2>
 	<form action="users_join.jsp" method="post">
-		<input type="text" name="id" placeholder="ID"><br/>
-		<input type="password" name="upw" placeholder="PW"><br/>
-		<input type="text" name="uname" placeholder="이름"><br/>
-		<input type="email" name="email" placeholder="e-mail"><br/>
+		<input type="text" name="id" placeholder="ID" required><br/>
+		<input type="password" name="upw" placeholder="PW" required><br/>
+		<input type="text" name="uname" placeholder="이름" required><br/>
+		<input type="email" name="email" placeholder="e-mail" required><br/>
 		<input type="submit" value="가입하기">
 		
 	</form>
