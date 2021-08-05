@@ -248,26 +248,23 @@ public class UsersDAO {
 	public int userUpdate(UsersVO user) {
 		Connection con = null;
 		PreparedStatement pstmt = null;
-		
-		UsersVO resultData = new UsersVO();
+		int result = 0;
+		String sql = "UPDATE users SET upw=?, uname=?, email=? WHERE id=?";
 		
 		try{
 			
 			//Connection 객체를 생성
 			con = DriverManager.getConnection(url, DBID, DBPW);
-			
-			String sql = "UPDATE users SET upw=?, uname=?, email=? WHERE id=?";
 
 			//PreparedStatement 객체 생성, 객체 생성시 SQL문장 저장			
 			pstmt = con.prepareStatement(sql);
 			
-			
-			pstmt.setString(1, resultData.getUpw());
-			pstmt.setString(2, resultData.getUname());
-			pstmt.setString(3, resultData.getEmail());
+			pstmt.setString(1, user.getUpw());
+			pstmt.setString(2, user.getUname());
+			pstmt.setString(3, user.getEmail());
 			pstmt.setString(4, user.getId());
 			
-			pstmt.executeUpdate();
+			result = pstmt.executeUpdate();
 			
 		}catch(SQLException e){
 			e.printStackTrace();
@@ -285,7 +282,7 @@ public class UsersDAO {
 				e.printStackTrace();
 			}
 		}
-		return 0;
+		return result;
 		
 	}
 	

@@ -30,6 +30,7 @@
 	if(userUpdate == 1){
 		response.sendRedirect("user_update_ok.jsp");
 	}else if(userUpdate == 0){
+		session.invalidate();
 		response.sendRedirect("user_update_fail.jsp");
 	}
 
