@@ -36,11 +36,12 @@
 <title>회원정보 수정 페이지</title>
 </head>
 <body>
+	<!-- readonly(변경불가)  required(입력필수) -->
 	<h2>회원정보 수정 페이지</h2>
 	<form action="user_update_ok.jsp" method="post">
-		<input type="text" name="uid" value="<%= user.getId() %>" placeholder="아이디" readonly/><br>
-		<input type="password" name="upw" placeholder="비밀번호"/><br>
-		<input type="text" name="uname" value="<%= resultData.getUname() %>" placeholder="이름"/><br>
+		<input type="text" name="uid" value="<%= user.getId() %>" placeholder="아이디" readonly required/><br>
+		<input type="password" name="upw" placeholder="비밀번호" required/><br>
+		<input type="text" name="uname" value="<%= resultData.getUname() %>" placeholder="이름" required/><br>
 		<input type="email" name="email" value="<%= resultData.getEmail() %>" placeholder="이메일"/><br>
 		<input type="submit" value="회원정보 수정"/><br>
 	</form>

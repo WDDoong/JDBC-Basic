@@ -53,6 +53,7 @@
 	<h2>로그인이 완료 되었습니다.</h2>
 	<a href="user_logout.jsp">로그아웃 하기</a><br/>
 	<a href="user_delete_form.jsp">회원탈퇴</a><br/>
-	<a href="user_update_form.jsp">회원정보 수정</a>
+	<a href="user_update_form.jsp">회원정보 수정</a><br/>
+	<a href="user_get_all.jsp">회원 전체 목록 보기</a>
 </body>
 </html>
